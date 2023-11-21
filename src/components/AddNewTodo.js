@@ -48,7 +48,7 @@ function AddNewTodo(){
       />
    
                         </div>
-                        <div className='pick-timr'>
+                        <div className='pick-time'>
                         <div className='title'>
                             <Clock />
                             <p> Choose time</p>

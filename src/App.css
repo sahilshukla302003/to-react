@@ -99,7 +99,7 @@
 /*addnewtodo form*/
 
 .AddNewTodo form{
-padding: 1rem;
+padding: 1rem 1rem calc(1rem + 40px) 1rem;
 width: 500px;
 background: white;
 border-radius: 4px;
@@ -131,8 +131,51 @@ padding:.5rem;
   margin-bottom: 5px;
 }
 
-.AddNewTodo form .pick-day,
-.picktime{
-padding:1.5rem;
+.AddNewTodo form .pick-day{
+padding:1.5rem 1.5rem 0 1.5rem;
+}
 
+.AddNewTodo form .pick-time{
+padding: 1.5rem;
+}
+.AddNewTodo form .pick-project{
+  padding: 0.5rem;
+}
+.AddNewTodo form .pick-project .projects{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 1rem 0 1rem;
+}  
+.AddNewTodo form .pick-project .projects .project{
+  border:1px solid blue;
+  border-radius: 5px;
+  padding: 5px;
+  margin:5px;
+  cursor:pointer;
+}
+
+.AddNewTodo form .pick-project .projects  .active{
+background: #0080ff;
+color: white;
+}
+.AddNewTodo form .cancel{
+  position: absolute;
+  top: 0;
+  right: 5px;
+  cursor: pointer;
+}
+.AddNewTodo form .confirm{
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+}
+.AddNewTodo form .confirm button{
+  width:100%;
+ height: 40px;
+ background: #0080ff;
+ font-size: 1.1rem;
+ border: none;
+ border-radius: 0 0 4px 4px;
+ cursor: pointer;
 }
