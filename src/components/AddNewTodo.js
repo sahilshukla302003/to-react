@@ -1,10 +1,15 @@
 import React, {useState} from 'react'
 import Modal from './Modal'
 import { Bell ,CalendarDay, Clock, Palette,X} from 'react-bootstrap-icons'
-
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
+import { DatePicker } from '@mui/x-date-pickers/DatePicker'
+import { MobileTimePicker } from '@mui/x-date-pickers/MobileTimePicker';
+import dayjs from 'dayjs';
 function AddNewTodo(){
     const [showModal, setShowModal] = useState(false)
     const[text,setText]=useState('')
+    
     return (
         <div className='AddNewTodo'>
             <div className="btn">
@@ -14,6 +19,7 @@ function AddNewTodo(){
             </div>
             <Modal showModal={showModal} setShowModal={setShowModal}>
                <form>
+               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <div className='text'>
                     <h3>Add new to do</h3>
                          <input
@@ -36,14 +42,18 @@ function AddNewTodo(){
                             <CalendarDay />
                             <p> Choose a day</p>
                         </div>
-                        date picker
+                        
+      <DatePicker 
+     
+      />
+   
                         </div>
                         <div className='pick-timr'>
                         <div className='title'>
                             <Clock />
                             <p> Choose time</p>
                         </div>
-                        time picker
+                        <MobileTimePicker defaultValue={dayjs('2022-04-17T15:30')} />
                         </div>    
                         <div className='pick-project'>
                         <div className='title'>
@@ -72,7 +82,7 @@ function AddNewTodo(){
                     </button>
 
                      </div>
-
+                     </LocalizationProvider>
                </form>
             </Modal>
         </div>
