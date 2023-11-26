@@ -1,5 +1,7 @@
 import React from 'react'
 import { CalendarDate, CaretUp } from 'react-bootstrap-icons'
+import { calendarItems } from './constants'
+
 function Calendar(){
 
     return (
@@ -19,7 +21,15 @@ function Calendar(){
                </div>
 
             </div>
-           
+            <div className='items'>
+                {
+                    calendarItems.map(item=>
+                        <div className='item' key={item} >
+                         {item}
+                        </div>
+                        )
+                }
+            </div>
         </div>
     )
 }
