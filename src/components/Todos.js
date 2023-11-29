@@ -11,8 +11,8 @@ const selectedProject="today"
             time:'10:00 AM',
             date:'27/11/2023',
             day:'6',
-            checked: false,
-            color:'#000000',
+            checked: true,
+            color:'#00ff00',
             project:'personal'
         },
         {
@@ -21,7 +21,7 @@ const selectedProject="today"
             time:'09:00 AM',
             date:'29/11/2023',
             day:'1',
-            checked: true,
+            checked: false,
             color:'#00ff00',
             project:'work'
         }
