@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { TodoContextProvider } from './context';
 import App from './App';
 
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <TodoContextProvider>
+       <App />
+  </TodoContextProvider>,
   document.getElementById('root')
 );
 
